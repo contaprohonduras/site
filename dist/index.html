@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CONTAPROH | Servicios Contables MIPYME</title>
+  <meta name="description" content="CONTAPROH - Más de 20 años de experiencia en servicios contables especializados para MIPYME en Honduras. ¡Organizamos la contabilidad de su negocio!" />
+  <meta name="keywords" content="contadores honduras, servicios contables, MIPYME, san pedro sula, contabilidad empresarial" />
+  <meta name="author" content="CONTAPROH | Servicios Contables MIPYME" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CONTAPROH - Contadores Profesionales de Honduras" />
+  <meta property="og:description" content="Más de 20 años organizando la contabilidad de MIPYME en Honduras" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%230076d4'/><text x='50' y='65' font-family='Arial' font-size='40' font-weight='bold' text-anchor='middle' fill='white'>C</text></svg>" />
+
+  <script type="module" crossorigin src="/assets/index-PWqpZq2J.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-4VQtvDmS.css">
+
+  <!-- Estilos para ocultar elementos MiniMax -->
+  <style>
+    #minimax-floating-ball,
+    [id*="minimax"],
+    [class*="minimax"],
+    [data-testid],
+    .badge,
+    .debug-badge,
+    .floating-widget {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
+    *::after,
+    *::before {
+      content: none !important;
+    }
+
+    * {
+      position: relative !important;
+    }
+
+    *[data-badge]::after {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- Script para eliminar dinámicamente elementos MiniMax -->
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      function removeMiniMaxElements() {
+        const miniMaxBall = document.getElementById('minimax-floating-ball');
+        if (miniMaxBall) miniMaxBall.remove();
+
+        const miniMaxElements = document.querySelectorAll('[id*="minimax"], [class*="minimax"]');
+        miniMaxElements.forEach(el => el.remove());
+
+        const badges = document.querySelectorAll('[data-testid], .badge, .debug-badge');
+        badges.forEach(el => el.remove());
+
+        const elementsWithBadges = document.querySelectorAll('*[data-badge]');
+        elementsWithBadges.forEach(el => {
+          el.removeAttribute('data-badge');
+          el.style.position = 'relative';
+        });
+      }
+
+      removeMiniMaxElements();
+      setTimeout(removeMiniMaxElements, 100);
+      setTimeout(removeMiniMaxElements, 500);
+      setTimeout(removeMiniMaxElements, 1000);
+
+      const observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+          mutation.addedNodes.forEach(function (node) {
+            if (node.nodeType === 1) {
+              if ((node.id && node.id.includes('minimax')) || (node.className && node.className.includes('minimax'))) {
+                node.remove();
+              }
+            }
+          });
+        });
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    });
+  </script>
+</body>
+
+</html>
