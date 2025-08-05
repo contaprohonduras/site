@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.contaproh.com/sitemap.xml
+
+# Preferencia de dominio canónico
+Host: https://www.contaproh.com
