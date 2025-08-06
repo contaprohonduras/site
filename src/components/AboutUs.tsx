@@ -66,7 +66,7 @@ const AboutUs = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-500 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 font-rubik max-w-3xl mx-auto leading-relaxed">
-            Con más de 20 años de experiencia, somos el aliado estratégico que las MIPYME hondureñas necesitan 
+            El aliado estratégico que las MIPYME's necesitan 
             para organizar y optimizar su contabilidad
           </p>
         </div>
@@ -76,16 +76,16 @@ const AboutUs = () => {
           <div className="animate-slide-in-left">
             <h3 className="font-krona text-2xl text-gray-800 mb-6">Sobre Nosotros</h3>
             <p className="text-gray-700 font-rubik text-lg leading-relaxed mb-6">
-              CONTAPROH es una firma de contadores profesionales establecida en San Pedro Sula, Cortés, 
-              con más de dos décadas dedicadas a brindar servicios contables especializados para MIPYME.
+              CONTAPROH es una firma de contadores públicos, establecida en San Pedro Sula y Puerto Cortés, 
+              dedicada a brindar servicios contables y fiscales para la MIPYME en Honduras.
             </p>
             <p className="text-gray-700 font-rubik text-lg leading-relaxed mb-6">
-              Nos especializamos en <span className="font-bold text-blue-600">Micro, Pequeña y Mediana Empresa</span>, 
-              entendiendo las necesidades únicas de cada negocio y ofreciendo soluciones personalizadas 
+              Especialistas en <span className="font-bold text-blue-600">Micro, Pequeña y Mediana Empresa</span>, 
+              atendiendo las necesidades únicas de cada negocio y ofreciendo soluciones personalizadas 
               que impulsan el crecimiento y la competitividad.
             </p>
             <p className="text-green-600 font-rubik text-xl font-bold">
-              "¡Organizamos la contabilidad de su negocio!"
+              "¡Organizamos la contabilidad de su empresa o negocio!"
             </p>
           </div>
           
@@ -126,8 +126,8 @@ const AboutUs = () => {
             </div>
             <p className="text-gray-700 font-rubik text-lg leading-relaxed">
               Ser una firma líder a nivel nacional, responsable de brindar servicios profesionales 
-              y soluciones integrales para la micro, pequeña y mediana empresa; contribuyendo al 
-              desarrollo y transformación de la región.
+              y soluciones integrales para la micro, pequeña y mediana empresa; contribuyendo con 
+              el desarrollo y transformación de la región.
             </p>
           </div>
         </div>
@@ -135,7 +135,7 @@ const AboutUs = () => {
         {/* Valores Corporativos */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h3 className="font-krona text-2xl text-gray-800 mb-4">Valores Corporativos</h3>
+            <h3 className="font-krona text-2xl text-gray-800 mb-4">Nuestros Valores</h3>
             <p className="text-gray-600 font-rubik text-lg">Los principios que guían nuestro trabajo y definen nuestra cultura empresarial</p>
           </div>
           

@@ -38,11 +38,11 @@ const Hero = () => {
             </div>
 
             <p className="text-lg text-gray-700 font-rubik mb-8 leading-relaxed">
-              Con <span className="font-bold text-blue-600">más de 20 años de experiencia</span>, somos el aliado estratégico que las MIPYME's hondureñas necesitan para organizar y optimizar su contabilidad.
+              Contadores Públicos con <span className="font-bold text-blue-600">más de 20 años de experiencia</span>, brindando servicios de contabilidad y gestión fiscal para la MIPYME en Honduras.
             </p>
             <div className="bg-green-100 border-l-4 border-green-600 p-4 rounded-r-lg mb-8">
               <p className="text-lg font-medium text-green-700 m-0">
-                "¡Organizamos la contabilidad de su negocio!"
+                "¡Organizamos la contabilidad de su empresa o negocio!"
               </p>
             </div>
 
@@ -112,8 +112,8 @@ const Hero = () => {
               {/* Badge flotante */}
               <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-2xl">
                 <div className="text-center">
+                  <div className="text-lg text-gray-600 font-rubik">Especialistas</div>
                   <div className="text-3xl font-bold text-blue-600 font-krona">MIPYME</div>
-                  <div className="text-sm text-gray-600 font-rubik">Especialistas</div>
                 </div>
               </div>
             </div>

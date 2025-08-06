@@ -109,7 +109,7 @@ Mensaje: ${formData.mensaje}`;
           {/* Formulario de contacto */}
           <div className="animate-slide-in-left">
             <div className="bg-gray-50 rounded-3xl p-8">
-              <h3 className="font-krona text-2xl text-gray-800 mb-6">Solicite su Consulta Gratuita</h3>
+              <h3 className="font-krona text-2xl text-gray-800 mb-6">Formulario de Consulta</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
