@@ -83,7 +83,8 @@ const Header = ({ activeSection }: HeaderProps) => {
               ))}
               <button
                 onClick={openWhatsApp}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full font-rubik font-medium transition-colors duration-300 flex items-center space-x-2"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full font-rubik font-medium transition-colors duration-300 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                aria-label="Contactar por WhatsApp"
               >
                 <MessageCircle className="h-5 w-5" />
                 <span>WhatsApp</span>
@@ -94,6 +95,9 @@ const Header = ({ activeSection }: HeaderProps) => {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-300"
+              aria-label={isMobileMenuOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-menu"
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -102,18 +106,28 @@ const Header = ({ activeSection }: HeaderProps) => {
 
         {/* Menú móvil */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
+          <nav 
+            id="mobile-menu"
+            className="lg:hidden bg-white border-t border-gray-200 shadow-lg"
+            role="navigation"
+            aria-label="Menú de navegación móvil"
+          >
             <div className="container mx-auto px-4 py-4">
               <div className="flex flex-col space-y-3">
-                {navItems.map((item) => (
+                {navItems.map((item, index) => (
                   <button
                     key={item.id}
-                    onClick={() => scrollToSection(item.id)}
-                    className={`text-left font-rubik font-medium py-3 px-4 rounded-md transition-colors duration-300 ${
+                    onClick={() => {
+                      scrollToSection(item.id);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className={`text-left font-rubik font-medium py-3 px-4 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                       activeSection === item.id
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
                     }`}
+                    tabIndex={isMobileMenuOpen ? 0 : -1}
+                    aria-current={activeSection === item.id ? 'page' : undefined}
                   >
                     {item.label}
                   </button>
@@ -139,7 +153,7 @@ const Header = ({ activeSection }: HeaderProps) => {
                 </div>
               </div>
             </div>
-          </div>
+          </nav>
         )}
       </nav>
     </header>

@@ -1,4 +1,5 @@
 import { ArrowRight, Users, Calendar, Award } from 'lucide-react';
+import LazyImage from './LazyImage';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -103,10 +104,10 @@ const Hero = () => {
           <div className="animate-slide-in-right">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-green-600/20 rounded-2xl transform rotate-3"></div>
-              <img
+              <LazyImage
                 src="/images/hero-office.jpg"
-                alt="Oficina moderna de CONTAPROH"
-                className="relative rounded-2xl shadow-2xl w-full h-[500px] object-cover hover-lift"
+                alt="Oficina moderna de CONTAPROH - Servicios contables profesionales"
+                className="relative rounded-2xl shadow-2xl w-full h-[500px] hover-lift"
               />
               
               {/* Badge flotante */}

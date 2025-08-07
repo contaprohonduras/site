@@ -1,4 +1,5 @@
 import { Calculator, FileText, Users, Building, TrendingUp, Shield, Briefcase, Scale } from 'lucide-react';
+import LazyImage from './LazyImage';
 
 const Services = () => {
   const serviceCategories = [
@@ -158,10 +159,10 @@ const Services = () => {
             </div>
             <div className="relative w-full max-w-full overflow-visible">
               <div className="absolute inset-0 bg-white/10 rounded-2xl transform rotate-3"></div>
-              <img
+              <LazyImage
                 src="/images/mipyme-growth.jpg"
-                alt="MIPYME en crecimiento"
-                className="relative rounded-2xl shadow-2xl w-full h-auto max-h-[400px] object-cover"
+                alt="MIPYME en crecimiento - Empresas hondureñas exitosas"
+                className="relative rounded-2xl shadow-2xl w-full h-auto max-h-[400px]"
               />
             </div>
           </div>

@@ -1,8 +1,29 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://www.contaproh.com/sitemap.xml
+# Permitir acceso a recursos estáticos
+Allow: /images/
+Allow: /assets/
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+Allow: *.ico
 
-# Preferencia de dominio canónico
-Host: https://www.contaproh.com
+# Disallow archivos innecesarios
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /*.config.*
+Disallow: /vite.config.*
+Disallow: /tsconfig.*
+Disallow: /package*.json
+
+# Sitemap
+Sitemap: https://contaproh.com/sitemap.xml
+
+# Crawl-delay para ser amigable con los servidores
+Crawl-delay: 1

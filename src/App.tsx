@@ -7,10 +7,13 @@ import ValuePropositions from './components/ValuePropositions';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { usePerformanceMetrics } from './hooks/use-performance';
 import './App.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('inicio');
+  const { metrics, performanceScore, logMetrics } = usePerformanceMetrics();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,19 +36,32 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Log performance metrics in development
+  useEffect(() => {
+    if (import.meta.env.DEV) {
+      const timer = setTimeout(() => {
+        logMetrics();
+      }, 5000); // Log metrics after 5 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [logMetrics]);
+
   return (
-    <div className="min-h-screen bg-white">
-      <Header activeSection={activeSection} />
-      <main>
-        <Hero />
-        <AboutUs />
-        <Services />
-        <ValuePropositions />
-        <Contact />
-      </main>
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    <ErrorBoundary>
+      <div className="min-h-screen bg-white">
+        <Header activeSection={activeSection} />
+        <main role="main">
+          <Hero />
+          <AboutUs />
+          <Services />
+          <ValuePropositions />
+          <Contact />
+        </main>
+        <Footer />
+        <WhatsAppButton />
+      </div>
+    </ErrorBoundary>
   );
 }
 
